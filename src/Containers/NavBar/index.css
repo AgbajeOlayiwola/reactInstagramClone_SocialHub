@@ -1,0 +1,10 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background-color: white;
+}
+.navbar_img{
+    width: 3%;
+    border-radius: 20%;
+}

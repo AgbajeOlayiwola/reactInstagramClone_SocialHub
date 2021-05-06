@@ -1,0 +1,38 @@
+.createPost{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 10px;
+}
+
+.createpost_addphoto > input{
+    display: none;
+}
+.createPost_LoggedIn{
+background-color: white;
+width:100%;
+max-width: 650px;
+border-radius: 10px;
+padding: 12px 16px;
+}
+.createpost_Uploadbtn{
+    border: none;
+    background-color: white;
+}
+.createpost_Bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.createpost_textarea{
+    border:none;
+    outline: 0ch;
+    width: 80%;
+    font-size: 14px;
+    margin-top: 3%;
+}
+#image-preview{
+    display: none;
+    height:80px;
+    border-radius: 6px;
+    padding: 12px 6px;
+}
