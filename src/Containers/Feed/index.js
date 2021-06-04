@@ -1,5 +1,5 @@
 import React, {useState, useEffect}from 'react'
-import { Post } from '..';
+import { Post } from '../../Containers';
 import "./index.css"
 import { db, storage } from '../../firebase';
 
@@ -12,6 +12,7 @@ export default function Feed() {
             setPost(snapshot.docs.map((doc)=>({id:doc.id, post: doc.data()})));
         })
     }, [])
+    console.log('na me')
     return (
         <div className="feed">
 
@@ -25,7 +26,7 @@ export default function Feed() {
             caption = {post.cption}
             comments={post.comments}
             />
-            })}
+            })}<br></br>
         </div>
     )
 }

@@ -12,7 +12,7 @@ export default function Navbar() {
             <h1>Social Hub </h1>
 
             {user ? 
-            (<img className="navbar_img" alt="" src={user.photoURL}/>
+            (<div className="Navbar_Profile"><p>{user.displayName}</p><img className="navbar_img" alt="" src={user.photoURL}/></div>
             ) : (
             <SignInBtn/>
             )}

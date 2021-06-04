@@ -2,9 +2,15 @@
     display: flex;
     justify-content: space-between;
     padding: 12px 24px;
-    background-color: white;
+    background-color: black;
+    color: white;
 }
 .navbar_img{
-    width: 3%;
+    width: 70%;
     border-radius: 20%;
+}
+.Navbar_Profile{
+    display: flex;
+    justify-content: space-between;
+    color: white;
 }

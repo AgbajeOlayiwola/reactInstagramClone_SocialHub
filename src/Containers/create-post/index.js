@@ -112,7 +112,7 @@ export default function CreatePost() {
                                 <button className="createpost_Uploadbtn" 
                                 onClick= {handleUpload}
                                 style={{color: caption ? '#000' : 'lightgrey', 
-                                border: "none", cursor:"pointer"}}> {`Upload ${progress !=0 ? progress : ""}`} </button>
+                                border: "none", cursor:"pointer"}}> {`Upload ${progress !=0 ? progress : ""}%`} </button>
                 </div>
                         </div>
        
