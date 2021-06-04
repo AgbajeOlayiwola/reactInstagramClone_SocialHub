@@ -1,3 +1,5 @@
+
+//stock code for image name changes gotten from stackoverflow
 export default function makeid(length) {
     var result           = [];
     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';

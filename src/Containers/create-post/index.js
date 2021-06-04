@@ -15,7 +15,7 @@ export default function CreatePost() {
  
     //caption for holding caption text hook
     const [caption, setCaption] = useState("");
-    //iamage state hook
+    //image state hook
     const [image, setImage] = useState(null)
 
     //progress hook

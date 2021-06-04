@@ -11,10 +11,9 @@ const [user, setUser] = useContext(UserContext).user;
     const deletePost = () =>{
         //delete images from firebase
         //get image ref file to be deleted
-
         var imageRef= storage.refFromURL(photoURL);
 
-        //deletefile
+        //deletefile 
         imageRef.delete().then(function(){
             console.log("deleted image")
         }).catch(function (error){
@@ -27,7 +26,7 @@ const [user, setUser] = useContext(UserContext).user;
             console.log('post deleted successfully');
         })
         .catch(function (error){
-            console.log(`erro post info delete ${error}`);
+            console.log(`error post info delete ${error}`);
         })
     }
     return (

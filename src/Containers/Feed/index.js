@@ -1,22 +1,22 @@
 import React, {useState, useEffect}from 'react'
 import { Post } from '../../Containers';
 import "./index.css"
-import { db, storage } from '../../firebase';
+import { db } from '../../firebase';
 
 export default function Feed() {
     const [post, setPost] = useState([]);
-
+//for getting data from firebase
     useEffect(() => {
         db.collection("post").onSnapshot((snapshot)=>
         {
             setPost(snapshot.docs.map((doc)=>({id:doc.id, post: doc.data()})));
         })
     }, [])
-    console.log('na me')
     return (
         <div className="feed">
 
             {post.map(({id, post}) =>{
+            //set post props
             return <Post
             key={id}
             id={id}
