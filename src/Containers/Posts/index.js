@@ -4,6 +4,7 @@ import { Comment } from '../../Components';
 import { db, storage } from '../../firebase';
 import CommentInput from '../../Components/comment-input';
 import { UserContext } from '../../const/user';
+import { auth } from '../../firebase';
 
 export default function Post({profileURL, username, id, photoURL, caption, comments}) {
 
@@ -29,6 +30,9 @@ const [user, setUser] = useContext(UserContext).user;
             console.log(`error post info delete ${error}`);
         })
     }
+    console.log('Post_ID', auth.currentUser.uid)
+    console.log('Post_UID', user.uid)
+
     return (
         <div className="post">
             <div className="post_header">
@@ -37,8 +41,9 @@ const [user, setUser] = useContext(UserContext).user;
                     <p style={{marginLeft:" 12px"}}>{username}</p>
 
                 </div>
-                {user ? <button onClick={deletePost} className="button_delete">Delete</button>
-                        :<></>}
+                {user.uid === auth.currentUser.uid ? <button onClick={deletePost} className="button_delete">Delete</button>
+                        :
+                <>. . .</>}
             </div>
             <div className="post_center">
                     <img className="post_photoURL" src={photoURL}/>
