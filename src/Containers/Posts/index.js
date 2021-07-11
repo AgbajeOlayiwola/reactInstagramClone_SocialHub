@@ -30,8 +30,6 @@ const [user, setUser] = useContext(UserContext).user;
             console.log(`error post info delete ${error}`);
         })
     }
-    console.log('Post_ID', auth.currentUser.uid)
-    console.log('Post_UID', user.uid)
 
     return (
         <div className="post">
@@ -40,10 +38,8 @@ const [user, setUser] = useContext(UserContext).user;
                     <img src={profileURL} className="post_headerPic"/>
                     <p style={{marginLeft:" 12px"}}>{username}</p>
 
-                </div>
-                {user.uid === auth.currentUser.uid ? <button onClick={deletePost} className="button_delete">Delete</button>
-                        :
-                <>. . .</>}
+                </div><button onClick={deletePost} className="button_delete">Delete</button>
+                        
             </div>
             <div className="post_center">
                     <img className="post_photoURL" src={photoURL}/>

@@ -1,4 +1,12 @@
 .home{
-    background-color: white;
+    background-color: #222;
     height: 100%;
+}
+.home_FeeCre {
+    top: 141px;
+    left: 27%;
+}
+.par{
+    position: fixed;
+    top: 0px;
 }
